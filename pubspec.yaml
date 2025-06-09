@@ -34,6 +34,7 @@ dependencies:
   convex_bottom_bar: ^3.0.0
   font_awesome_flutter: ^10.7.0 
   url_launcher: ^6.2.5
+  provider: ^6.1.5
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -74,10 +75,12 @@ flutter:
       - assets/capital-del-palmito1.png
       - assets/escudopvm.png
       - assets/ecosistemapvm.png
-      - assets/parcentralpvm.jpg
+      
       - assets/ceviche23.png
       - assets/56.png
-      - assets/icons8-turismo-30.png
+     
+           #oficuales 
+      - assets/parcentralpvm.jpg
       - assets/icons8-senderismo-40.png
       - assets/icons8-piscina-100.png
       - assets/icons8-nadar-96.png
@@ -86,7 +89,21 @@ flutter:
       - assets/icons8-persona-en-la-cama-96.png
       - assets/icons8-restaurante--96.png
       - assets/icons8-real-food-for-meals-100.png
-      
+      - assets/cascadasVerdes.webp
+      - assets/cascadaSaltodeltigre.webp
+      - assets/balnearioCaoni.webp
+      - assets/santuarioaves.webp
+      - assets/santuariolacelica.jpg
+      - assets/icons8-religion-64.png
+      - assets/muricatas.jpg
+      - assets/remanso.jpg
+      - assets/hotelapolo.jpg
+      - assets/hotelcristalazul.avif
+      - assets/hosteriaparaiso.jpg
+      - assets/casamercedes.jpg
+      - assets/sunandmoon.jpg
+      - assets/iglesia.jpg
+      - assets/villamaria.jpg
   
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

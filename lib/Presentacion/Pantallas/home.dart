@@ -37,27 +37,31 @@ class HomePage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: const SingleChildScrollView(
-        child: Column(
-          children: [
-            Carrusel(),
-            SizedBox(height: 15),
-            BuscadorInicio(),
-            SizedBox(height: 15),
-
-            Text(
-              "¿Qué Necesitas?",
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: Colors.green,
+      body: Column(
+        children: [
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  const Carrusel(),
+                  const SizedBox(height: 15),
+                  const BuscadorInicio(), // Ahora modificado para no usar Expanded internamente
+                  const SizedBox(height: 15),
+                  const Text(
+                    "¿Qué Necesitas?",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.green,
+                    ),
+                  ),
+                  const SizedBox(height: 15),
+                  const CardsGrid(),
+                ],
               ),
             ),
-            SizedBox(height: 15),
-
-            CardsGrid(),
-          ],
-        ),
+          ),
+        ],
       ),
       bottomNavigationBar: const Barranavegacion(currentIndex: 0),
     );

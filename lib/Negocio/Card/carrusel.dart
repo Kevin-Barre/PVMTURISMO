@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:pvmturismo/Negocio/Models/modelos.dart';
 
 class Carrusel extends StatefulWidget {
-  const Carrusel({Key? key}) : super(key: key);
+  const Carrusel({super.key});
 
   @override
   _CarruselScreenState createState() => _CarruselScreenState();
@@ -12,7 +12,7 @@ class Carrusel extends StatefulWidget {
 
 class _CarruselScreenState extends State<Carrusel> {
   late PageController _pageController;
-  int _currentPage = 0;
+  final int _currentPage = 0;
 
   @override
   void initState() {

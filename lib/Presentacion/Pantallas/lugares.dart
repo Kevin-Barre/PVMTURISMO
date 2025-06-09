@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pvmturismo/Negocio/Card/carruselLugares.dart';
 import 'package:pvmturismo/Negocio/Navegacion/barraNavegacion.dart';
+import 'package:pvmturismo/Negocio/Navegacion/search.dart';
+import 'package:pvmturismo/Presentacion/Fondo/fondo.dart';
 
 class Locationspage extends StatelessWidget {
   const Locationspage({super.key});
@@ -23,7 +26,21 @@ class Locationspage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Center(child: Text("Esta es la página de lugares")),
+      body: BackgroundCornerImage(
+        imagePath: "assets/ecosistemapvm.png",
+        child: Column(
+          children: [
+            const SizedBox(height: 30),
+            Text(
+              "Explora nuestros lugares turísticos",
+              style: TextStyle(fontSize: 20),
+            ),
+            const SizedBox(height: 15),
+            BuscadorInicio(),
+            CarruselLugares(),
+          ],
+        ),
+      ),
       bottomNavigationBar: const Barranavegacion(currentIndex: 1),
     );
   }
