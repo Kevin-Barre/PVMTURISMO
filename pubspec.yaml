@@ -35,6 +35,8 @@ dependencies:
   font_awesome_flutter: ^10.7.0 
   url_launcher: ^6.2.5
   provider: ^6.1.5
+  curved_navigation_bar: ^1.0.6
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -104,6 +106,7 @@ flutter:
       - assets/sunandmoon.jpg
       - assets/iglesia.jpg
       - assets/villamaria.jpg
+      - assets/rutasdisponivles.png
   
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -53,7 +55,7 @@ class _CarruselLugaresState extends State<CarruselLugares> {
       child: Column(
         children: <Widget>[
           AspectRatio(
-            aspectRatio: 0.75,
+            aspectRatio: 0.73,
             child: PageView.builder(
               itemCount: lugaresAUsar.length,
               controller: _pageController,

@@ -7,6 +7,7 @@ class Carrusel extends StatefulWidget {
   const Carrusel({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _CarruselScreenState createState() => _CarruselScreenState();
 }
 

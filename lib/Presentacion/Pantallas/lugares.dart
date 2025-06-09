@@ -10,6 +10,7 @@ class Locationspage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: Colors.green,
         automaticallyImplyLeading: false,
@@ -28,17 +29,19 @@ class Locationspage extends StatelessWidget {
       ),
       body: BackgroundCornerImage(
         imagePath: "assets/ecosistemapvm.png",
-        child: Column(
-          children: [
-            const SizedBox(height: 30),
-            Text(
-              "Explora nuestros lugares turísticos",
-              style: TextStyle(fontSize: 20),
-            ),
-            const SizedBox(height: 15),
-            BuscadorInicio(),
-            CarruselLugares(),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(height: 30),
+              Text(
+                "Explora nuestros lugares turísticos",
+                style: TextStyle(fontSize: 20),
+              ),
+              const SizedBox(height: 15),
+              BuscadorInicio(),
+              CarruselLugares(),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: const Barranavegacion(currentIndex: 1),

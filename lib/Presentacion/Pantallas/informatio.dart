@@ -26,35 +26,37 @@ class InformactionPage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Carrusel(),
-            const SizedBox(height: 10),
-            SizedBox(
-              height: 250,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: const [
-                  InfoCard(
-                    title: "🧭 Misión",
-                    content:
-                        "Promover el desarrollo turístico sostenible de Pedro Vicente Maldonado mediante una aplicación interactiva que conecta a visitantes con la riqueza natural, cultural y comunitaria del cantón, facilitando el acceso a rutas, experiencias y emprendimientos locales.",
-                  ),
-                  SizedBox(width: 16),
-                  InfoCard(
-                    title: "🎯 Visión",
-                    content:
-                        "Convertir a Pedro Vicente Maldonado en un referente nacional del turismo comunitario digitalizado, fortaleciendo el vínculo entre tecnología, comunidad y naturaleza para impulsar el bienestar local y la identidad territorial.",
-                  ),
-                ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Carrusel(),
+              const SizedBox(height: 10),
+              SizedBox(
+                height: 250,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: const [
+                    InfoCard(
+                      title: "🧭 Misión",
+                      content:
+                          "Promover el desarrollo turístico sostenible de Pedro Vicente Maldonado mediante una aplicación interactiva que conecta a visitantes con la riqueza natural, cultural y comunitaria del cantón, facilitando el acceso a rutas, experiencias y emprendimientos locales.",
+                    ),
+                    SizedBox(width: 16),
+                    InfoCard(
+                      title: "🎯 Visión",
+                      content:
+                          "Convertir a Pedro Vicente Maldonado en un referente nacional del turismo comunitario digitalizado, fortaleciendo el vínculo entre tecnología, comunidad y naturaleza para impulsar el bienestar local y la identidad territorial.",
+                    ),
+                  ],
+                ),
               ),
-            ),
-            const SizedBox(height: 20),
-            const SocialIconsRow(),
-          ],
+              const SizedBox(height: 20),
+              const SocialIconsRow(),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: const Barranavegacion(currentIndex: 2),

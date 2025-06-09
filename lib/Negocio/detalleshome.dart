@@ -16,6 +16,7 @@ class FilteredListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text(categoria, style: const TextStyle(color: Colors.white)),
         backgroundColor: Colors.green[400],
@@ -45,7 +46,12 @@ class FilteredListScreen extends StatelessWidget {
                 )
                 : Column(
                   children: [
-                    const SizedBox(height: 50),
+                    const SizedBox(height: 60),
+                    /*Image.asset(
+                      "assets/rutasdisponivles.png",
+                      height: 150,
+                      width: 300,
+                    ),*/
                     const Text(
                       "Rutas Disponibles",
                       style: TextStyle(

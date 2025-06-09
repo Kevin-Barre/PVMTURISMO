@@ -30,7 +30,7 @@ class SocialIconsRow extends StatelessWidget {
         _buildIcon(
           FontAwesomeIcons.tiktok,
           Colors.black,
-          "https://www.tiktok.com/@gadmpvm",
+          "https://www.tiktok.com/@gadmpvm/video/7511732152128589061",
         ),
         _buildIcon(
           FontAwesomeIcons.globe,

@@ -15,13 +15,13 @@ class BackgroundCornerImage extends StatelessWidget {
     return Stack(
       children: [
         Positioned(
-          bottom: -80,
+          bottom: -120,
           right: -100,
           child: Opacity(
             opacity: 0.25,
             child: Container(
-              height: 600,
-              width: 600,
+              height: 900,
+              width: 500,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(imagePath),

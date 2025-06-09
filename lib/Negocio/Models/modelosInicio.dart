@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:pvmturismo/Negocio/Card/cardlugares.dart';
 import 'package:pvmturismo/Negocio/Models/modelo.prueba.dart';
@@ -6,7 +8,6 @@ import 'package:pvmturismo/Negocio/detalleshome.dart';
 class CardsGrid extends StatelessWidget {
   const CardsGrid({super.key});
 
-  // Lista de datos para las tarjetas
   final List<Map<String, String>> data = const [
     {'title': 'Senderismo', 'image': 'assets/icons8-senderismo-40.png'},
     {

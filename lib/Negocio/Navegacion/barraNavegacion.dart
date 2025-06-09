@@ -1,5 +1,7 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:pvmturismo/Presentacion/Pantallas/home.dart';
 import 'package:pvmturismo/Presentacion/Pantallas/informatio.dart';
 import 'package:pvmturismo/Presentacion/Pantallas/lugares.dart';
@@ -10,6 +12,7 @@ class Barranavegacion extends StatefulWidget {
   const Barranavegacion({super.key, required this.currentIndex});
 
   @override
+  // ignore: library_private_types_in_public_api
   _BarranavegacionState createState() => _BarranavegacionState();
 }
 
@@ -36,13 +39,12 @@ class _BarranavegacionState extends State<Barranavegacion>
 
   @override
   Widget build(BuildContext context) {
-    return ConvexAppBar(
-      style: TabStyle.react, // Mantenemos el estilo original
-      backgroundColor: Colors.green,
-      color: Colors.white,
-      activeColor: const Color.fromARGB(255, 0, 255, 8),
-      initialActiveIndex: _currentIndex,
-      curve: Curves.easeInOut,
+    return CurvedNavigationBar(
+      backgroundColor: Colors.white12,
+      color: Colors.green,
+      animationDuration: const Duration(milliseconds: 300),
+      index: _currentIndex,
+      height: 55,
       onTap: (index) {
         if (index == _currentIndex) return;
 
@@ -52,9 +54,9 @@ class _BarranavegacionState extends State<Barranavegacion>
         _navigateWithAnimation(context, index);
       },
       items: const [
-        TabItem(icon: Icons.home_work_outlined, title: 'Inicio'),
-        TabItem(icon: Icons.location_on_outlined, title: 'Lugares'),
-        TabItem(icon: Icons.info_outline, title: 'Acerca de'),
+        Icon(Icons.home, color: Colors.white),
+        Icon(Icons.location_on_outlined, color: Colors.white),
+        Icon(Icons.info_outline, color: Colors.white),
       ],
     );
   }
@@ -76,7 +78,7 @@ class _BarranavegacionState extends State<Barranavegacion>
           ),
         );
       },
-      transitionDuration: const Duration(milliseconds: 300),
+      transitionDuration: const Duration(milliseconds: 480),
     );
 
     Navigator.of(context).pushReplacement(route).then((_) {
